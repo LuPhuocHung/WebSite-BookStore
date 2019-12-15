@@ -1,0 +1,168 @@
+<div class="jumbotron">
+    <div class="container">
+
+      <h1 class="display-4">Giỏ Hàng</h1>
+      <p class="lead">Giỏ hàng của bạn!</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="spec ">
+         <h3>Giỏ Hàng</h3>
+         <div class="ser-t">
+            <b></b>
+            <span><i></i></span>
+            <b class="line"></b>
+          </div>
+
+    <!--table-->
+           <table class="table">
+            <tr>
+            <th class="t-head head-it ">Products</th>
+            <th class="t-head">Price</th>
+          <th class="t-head">Quantity</th>
+
+            <th class="t-head">Purchase</th>
+            </tr>
+            <tr class="cross">
+            <td class="ring-in t-data">
+              <a href="single.html" class="at-in">
+                <img src="" class="backgr" alt="">
+              </a>
+            <div class="sed">
+              <h5>Conan</h5>
+            </div>
+              <div class="clearfix"> </div>
+              <div class="close1"> <i class="fa fa-times" aria-hidden="true"></i></div>
+             </td>
+            <td class="t-data">$10.00</td>
+            <td class="t-data"><div class="quantity">
+                      <div class="quantity-select">
+                        <div class="entry value-minus">&nbsp;</div>
+                          <div class="entry value"><span class="span-1">1</span></div>
+                        <div class="entry value-plus active">&nbsp;</div>
+                      </div>
+                    </div>
+
+            </td>
+
+            <td class="t-data t-w3l"><a class=" add-1" href="single.html">Add To Cart</a></td>
+
+            </tr>
+            <tr class="cross1">
+            <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/wi1.png" class="img-responsive" alt=""></a>
+            <div class="sed">
+              <h5>Doremon</h5>
+            </div>
+            <div class="clearfix"> </div>
+                    <div class="close2"> <i class="fa fa-times" aria-hidden="true"></i></div>
+      </td>
+            <td class="t-data">$20.00</td>
+          <td class="t-data"><div class="quantity">
+                      <div class="quantity-select">
+                        <div class="entry value-minus">&nbsp;</div>
+                          <div class="entry value"><span class="span-1">1</span></div>
+                        <div class="entry value-plus active">&nbsp;</div>
+                      </div>
+                    </div>
+
+            </td>
+
+            <td class="t-data t-w3l"><a class=" add-1" href="single.html">Add To Cart</a></td>
+
+            </tr>
+            <tr class="cross2">
+            <td class="t-data ring-in"><a href="single.html" class="at-in"><img src="images/wi2.png" class="img-responsive" alt=""></a>
+            <div class="sed">
+              <h5>XXX</h5>
+            </div>
+            <div class="clearfix"> </div>
+              <div class="close3"> <i class="fa fa-times" aria-hidden="true"></i></div>
+            </td>
+            <td class="t-data">$15.00</td>
+            <td class="t-data"><div class="quantity">
+                      <div class="quantity-select">
+                        <div class="entry value-minus">&nbsp;</div>
+                          <div class="entry value"><span class="span-1">1</span></div>
+                        <div class="entry value-plus active">&nbsp;</div>
+                      </div>
+                    </div>
+
+            </td>
+
+            <td class="t-data"><a class=" add-1" href="single.html">Add To Cart</a></td>
+
+            </tr>
+        </table>
+        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">
+          Thanh toán
+        </button>
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2>Vui lòng điền thông tin:</h2>
+          <form style="margin-top: 20px">
+            <div class="input-group mb-3 input-group-md">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="border-color: #3f3d3c">Địa chỉ</span>
+              </div>
+              <input type="text" class="form-control" #code style="border-color: #3f3d3c">
+            </div>
+            <div class="input-group mb-3 input-group-md" style="margin-top: 20px">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="border-color: #3f3d3c">Số ĐT</span>
+              </div>
+              <input type="text" class="form-control" #code style="border-color: #3f3d3c">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success"
+            data-dismiss="modal">Thanh Toán</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div style="margin-top:10px;" class="table-responsive" >
+    <table class="table table-bordered" >
+      <thead>
+          <tr>
+            <th>Tiêu Đề</th>
+            <th>Mô tả</th>
+            <th>Ngày xuất bản</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let cart of carts ">
+            <td>{{carts.item.title}}</td>
+            <td>{{carts.price}}</td>
+            <td>{{carts.qty}}</td>
+            <td><img src="{{carts.item.imageUrl}}" class="backgr"></td>
+            <td style="width: 90px;">
+                <i class="fas fa-edit" style="margin-right: 10px;"
+                 title="Edit"  ></i>
+                <i class="fas fa-trash"
+                 title="Delete"></i>
+            </td>
+          </tr>
+      </tbody>
+  </table>
+  <pagination-controls style="text-align: center;" ></pagination-controls>
+  </div>
